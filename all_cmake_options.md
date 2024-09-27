@@ -11,32 +11,32 @@ cmake -S . -B build -G "Ninja"          # Configure with Ninja generator
 ## Build Types
 
 ```cmake
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug # Configure for debug build
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release # Configure for release build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug          # Configure for debug build
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release        # Configure for release build
 cmake -S . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo # Configure for release build with debug info
-cmake -S . -B build -DCMAKE_BUILD_TYPE=MinSizeRel # Configure for minimum size release
+cmake -S . -B build -DCMAKE_BUILD_TYPE=MinSizeRel     # Configure for minimum size release
 ```
 
 ## Compiler Selection
 
 ```cmake
-cmake -S . -B build -DCMAKE_CXX_COMPILER=/usr/bin/g++ # Use g++ as C++ compiler
+cmake -S . -B build -DCMAKE_CXX_COMPILER=/usr/bin/g++     # Use g++ as C++ compiler
 cmake -S . -B build -DCMAKE_CXX_COMPILER=/usr/bin/clang++ # Use clang++ as C++ compiler
-cmake -S . -B build -DCMAKE_C_COMPILER=/usr/bin/gcc # Use gcc as C compiler
-cmake -S . -B build -DCMAKE_C_COMPILER=/usr/bin/clang # Use clang as C compiler
+cmake -S . -B build -DCMAKE_C_COMPILER=/usr/bin/gcc       # Use gcc as C compiler
+cmake -S . -B build -DCMAKE_C_COMPILER=/usr/bin/clang     # Use clang as C compiler
 ```
 
 ## Compilation Flags
 
 ```cmake
 cmake -S . -B build -DCMAKE_CXX_FLAGS="-Wall -Wextra -pedantic" # Set C++ compilation flags
-cmake -S . -B build -DCMAKE_C_FLAGS="-Wall -Wextra -pedantic" # Set C compilation flags
+cmake -S . -B build -DCMAKE_C_FLAGS="-Wall -Wextra -pedantic"   # Set C compilation flags
 ```
 
 ## Installation
 
 ```cmake
-cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local # Set installation prefix to /usr/local
+cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local   # Set installation prefix to /usr/local
 cmake -S . -B build -DCMAKE_INSTALL_PREFIX=$HOME/.local # Set installation prefix to user's local directory
 ```
 
@@ -49,7 +49,7 @@ cmake -S . -B build -DCMAKE_PREFIX_PATH="/opt/qt5;/opt/boost" # Specify addition
 ## Library Types
 
 ```cmake
-cmake -S . -B build -DBUILD_SHARED_LIBS=ON # Build shared libraries
+cmake -S . -B build -DBUILD_SHARED_LIBS=ON  # Build shared libraries
 cmake -S . -B build -DBUILD_SHARED_LIBS=OFF # Build static libraries
 ```
 
