@@ -74,7 +74,12 @@ cmake -S . -B build -DCMAKE_VERBOSE_MAKEFILE=ON # Enable verbose output during b
 ## Advanced Configuration
 
 ```cmake
-cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=/usr/bin/clang++ -DCMAKE_CXX_FLAGS="-Wall -Wextra" -DBUILD_SHARED_LIBS=ON -DCMAKE_INSTALL_PREFIX=/opt/myapp # Complex configuration example
+# Complex configuration example
+cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release 
+                               -DCMAKE_CXX_COMPILER=/usr/bin/clang++ 
+                               -DCMAKE_CXX_FLAGS="-Wall -Wextra" 
+                               -DBUILD_SHARED_LIBS=ON 
+                               -DCMAKE_INSTALL_PREFIX=/opt/myapp 
 ```
 
 ## Toolchain Usage
