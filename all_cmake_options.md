@@ -56,13 +56,15 @@ cmake -S . -B build -DBUILD_SHARED_LIBS=OFF # Build static libraries
 ## IDE and Linter Support
 
 ```cmake
-cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON # Generate compile_commands.json for IDE and linter support
+# Generate compile_commands.json for IDE and linter support
+cmake -S . -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON 
 ```
 
 ## Position Independent Code
 
 ```cmake
-cmake -S . -B build -DCMAKE_POSITION_INDEPENDENT_CODE=ON # Generate position-independent code
+# Generate position-independent code
+cmake -S . -B build -DCMAKE_POSITION_INDEPENDENT_CODE=ON 
 ```
 
 ## Verbose Build Output
@@ -86,7 +88,7 @@ cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release
 
 ```cmake
 cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=/path/to/toolchain.cmake # Use a specific toolchain file
-cmake --toolchain /home/user/my-toolchain.cmake . # Alternative toolchain specification
+cmake --toolchain /home/user/my-toolchain.cmake .                   # Alternative toolchain specification
 ```
 
 ## Testing
@@ -105,13 +107,14 @@ cmake -S . -B build && cmake --build build -- -j$(nproc) # Configure and build u
 
 ```cmake
 cmake -S . -B build -UCMAKE_INSTALL_PREFIX -DCMAKE_INSTALL_PREFIX=/new/path # Unset a cached variable and set a new value
-cmake -S . -B build -C /path/to/initial-cache.cmake # Load initial cache file
+cmake -S . -B build -C /path/to/initial-cache.cmake                         # Load initial cache file
 ```
 
 ## Sanitizers
 
 ```cmake
-cmake -S . -B build -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined" # Enable Address and Undefined Behavior Sanitizers
+# Enable Address and Undefined Behavior Sanitizers
+cmake -S . -B build -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined" 
 ```
 
 ## Dependency Graph Generation
@@ -123,9 +126,9 @@ cmake -S . -B build --graphviz=deps.dot # Generate a graphviz file of the depend
 ## Presets
 
 ```cmake
-cmake --preset debug . # Use debug preset
+cmake --preset debug .   # Use debug preset
 cmake --preset release . # Use release preset
-cmake --list-presets # List available presets
+cmake --list-presets     # List available presets
 ```
 
 ## Fresh Configuration
@@ -145,7 +148,7 @@ cmake --build ./build --config Release # Build the project in Release configurat
 ## Installation Commands
 
 ```cmake
-cmake --install ./build # Install the project
+cmake --install ./build                     # Install the project
 cmake --install ./build --prefix /usr/local # Install the project with a specific prefix
 ```
 
