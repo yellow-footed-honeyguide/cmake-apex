@@ -161,37 +161,37 @@ cmake -N . # View configuration without executing commands
 ## Logging Levels
 
 ```cmake
-cmake --log-level=ERROR . # Set log level to ERROR
+cmake --log-level=ERROR .   # Set log level to ERROR
 cmake --log-level=WARNING . # Set log level to WARNING
-cmake --log-level=NOTICE . # Set log level to NOTICE
-cmake --log-level=STATUS . # Set log level to STATUS
+cmake --log-level=NOTICE .  # Set log level to NOTICE
+cmake --log-level=STATUS .  # Set log level to STATUS
 cmake --log-level=VERBOSE . # Set log level to VERBOSE
-cmake --log-level=DEBUG . # Set log level to DEBUG
-cmake --log-level=TRACE . # Set log level to TRACE
+cmake --log-level=DEBUG .   # Set log level to DEBUG
+cmake --log-level=TRACE .   # Set log level to TRACE
 ```
 
 ## Tracing
 
 ```cmake
-cmake --trace . # Enable tracing of all commands
+cmake --trace .        # Enable tracing of all commands
 cmake --trace-expand . # Enable tracing with variable expansion
 ```
 
 ## Combined Examples
 
 ```cmake
-cmake -Wdev --fresh --log-level=DEBUG . # Fresh configuration with developer warnings and debug logging
+cmake -Wdev --fresh --log-level=DEBUG .                                                   # Fresh configuration with developer warnings and debug logging
 cmake --toolchain /path/to/toolchain.cmake --install-prefix /opt/myapp --preset release . # Use toolchain, set install prefix, and use release preset
-cmake --build ./build --config Release -- -j$(nproc) # Build in Release config using all cores
-cmake --install ./build --prefix /opt/myapp --strip # Install with stripping symbols
+cmake --build ./build --config Release -- -j$(nproc)                                      # Build in Release config using all cores
+cmake --install ./build --prefix /opt/myapp --strip                                       # Install with stripping symbols
 ```
 
 ## Large Project Example
 
 ```cmake
 cmake -S . -B build -G "Ninja" --preset=release --log-level=VERBOSE # Configure large project
-cmake --build build --config Release --parallel 8 # Build large project using 8 cores
-cmake --install build --prefix /opt/myapp --strip # Install large project
+cmake --build build --config Release --parallel 8                   # Build large project using 8 cores
+cmake --install build --prefix /opt/myapp --strip                   # Install large project
 ```
 
 ## CMake Script Debugging
@@ -216,7 +216,7 @@ cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=/path/to/cross-toolchain.cmake # Conf
 
 ```cmake
 cmake -S . -B build -DCPACK_GENERATOR="DEB;RPM" # Configure for DEB and RPM package generation
-cpack --config ./build/CPackConfig.cmake # Generate packages
+cpack --config ./build/CPackConfig.cmake        # Generate packages
 ```
 
 ## Code Coverage
