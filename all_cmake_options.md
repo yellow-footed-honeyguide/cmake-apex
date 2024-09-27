@@ -3,9 +3,9 @@
 ## Basic Configuration
 
 ```cmake
-cmake -S . -B build # Configure the project in the 'build' directory
+cmake -S . -B build                     # Configure the project in the 'build' directory
 cmake -S . -B build -G "Unix Makefiles" # Configure with Unix Makefiles generator
-cmake -S . -B build -G "Ninja" # Configure with Ninja generator
+cmake -S . -B build -G "Ninja"          # Configure with Ninja generator
 ```
 
 ## Build Types
